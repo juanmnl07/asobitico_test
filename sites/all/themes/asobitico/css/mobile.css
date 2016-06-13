@@ -1,0 +1,511 @@
+@media (max-width: 767px) {
+
+	.bg-gris{
+		margin-left: -8px !important;
+		margin-right: -8px !important;
+		padding-left: 10px !important;
+		padding-right: 10px !important;
+		margin: 0 auto !important;
+	}
+	.node-calendario{
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	.h320{
+		height: auto;
+	}
+	.view-id-transparencia{
+		width: 100%;
+	}
+	.view-id-transparencia .views-row{
+		padding: 25px 20px;
+	}
+
+	.costos-capacitaciones .gu-1-5,
+	.colaboracion-comunidad-bloques .gu-1-5,
+	.costos-capacitaciones .gu-1-3{
+		width: 50%;
+		margin-bottom: 20px;
+	}
+
+	.llamado-accion .gu-1-4:last-child{
+		width: 100%;
+	}
+	.llamado-accion .gu-1-4:last-child .btn{
+		float: none;
+		margin: 0 auto;
+	}
+
+	.view-display-id-block_calendario_anual .views-row{
+		position: static;
+		padding: 10px 0px;
+	}
+	.view-display-id-block_calendario_anual .views-row .btn.a-right{
+		float: none;
+	}
+
+	.page-logros .pane-3 .gu-1-2,
+	.page-achievements .pane-3 .gu-1-2{
+	padding-left: 20px;
+    padding-top: 0px;
+    width: 100%;
+	}
+	.page-logros .pane-5 .gu-1-2,
+	.page-achievements .pane-5 .gu-1-2,
+	.page-logros .pane-9 .gu-1-2,
+	.page-achievements .pane-9 .gu-1-2{
+    padding-right: 20px;
+    padding-top: 0px;
+    width: 100%;
+	}
+	.page-logros .gu-1-2,
+	.page-achievements .gu-1-2{
+		width: 100%;
+		height: auto;
+		/*min-height: 400px;*/
+	}
+
+	.categorias-talleres .gu-1-3{
+		width: 50%;
+	}
+	.categorias-talleres .box_taller .a-center a.btn{
+		position: static;
+		width: 100%;
+		min-width: 100%;
+	}
+
+	.pane-block-12 span, .pane-block-23 span{
+		display: block;
+		float: none;
+		text-align: center;
+		margin: 0px;
+	}
+	.pane-block-12 .gu_r, .pane-block-23 .gu_r{
+		text-align: left;
+	}
+
+	.block-listado-colegios .view-content .views-row{
+		display: block;
+		width: 350px;
+		margin: 0 auto;
+		clear: both;
+		float: none;
+		overflow: hidden;
+		margin-bottom: 25px;
+	}
+	.menu-anclas{
+		width: 115px;
+		top: initial;
+    bottom: 10px;
+	}
+	.menu-anclas ul li a{
+		height: 35px;
+		font-size: 13px;
+		line-height: 37px;
+	}
+	#ancla-costo-afiliacion .btn{
+		line-height: 24px;
+	}
+	.page-forme-parte-de-asobitico .panel-flexible h2,
+	.page-be-part-of-asobitico .panel-flexible h2{
+		line-height: 35px;
+	}
+
+	.front .flexslider .container-flex-caption{
+		position: static;
+		margin: 0 auto;
+	}
+	.front .flexslider .flex-caption{
+		/*display: none;*/
+
+		width: 100%;
+	}
+	.front .flexslider .flex-caption .refran-nelson{
+		font-size: 20px;
+		line-height: 25px;
+	}
+
+	.front .flexslider .flex-caption .refran-nelson span{
+		margin-top: 10px;
+	}
+
+	.front .flexslider .flex-caption .refran-nelson:before, .front .flexslider .flex-caption .refran-nelson:after{
+		height: 30px;
+	}
+
+	.gu-1-4{
+		width: 50%;
+		margin-bottom: 20px;
+	}
+
+	.caja-icono strong{
+		font-size: 20px;
+	}
+
+	.caja-icono p{
+		font-size: 16px;
+		line-height: 21px;
+	}
+
+	.primer-fila-interna, .segunda-fila-interna{
+		margin-bottom: 0px;
+	}
+
+	.i_tel,
+	.i_mail{
+		text-align: right;
+		background-position: 50% top;
+	}
+
+
+	.main-content iframe{
+		width: 100%;
+		height: auto;
+		/*height: auto !important;*/
+		min-height: 300px;
+	}
+
+	.page-news-feed .panels-flexible-dos_filas_news_feed_menu_lateral .panels-flexible-region,
+	.page-news-feed-en .panels-flexible-dos_filas_news_feed_menu_lateral .panels-flexible-region{
+		float: none;
+		margin: 0 auto;
+	}
+
+	.page-news-feed .panels-flexible-dos_filas_news_feed_menu_lateral .panels-flexible-region.panels-flexible-region-first,
+	.page-news-feed-en .panels-flexible-dos_filas_news_feed_menu_lateral .panels-flexible-region.panels-flexible-region-first{
+		margin-bottom: 30px;
+	}
+
+	.page-news-feed .panels-flexible-dos_filas_news_feed_menu_lateral .panels-flexible-region.panels-flexible-region-last,
+	.page-news-feed-en .panels-flexible-dos_filas_news_feed_menu_lateral .panels-flexible-region.panels-flexible-region-last{
+		width: 100% !important;
+	}
+
+
+	.one-sidebar #sidebar-first{
+		float: none;
+		margin: 0 auto;
+		width: 50%;
+		margin-bottom: 30px;
+	}
+
+	.one-sidebar #sidebar-first h2{
+		margin-top: 0;
+	}
+
+	.one-sidebar .main{
+		clear: both;
+		width: 100%;
+		float: none;
+	}
+
+	#search-form label{
+
+	    display: block;
+	    float: none;
+	    margin: 20px auto;
+	    text-align: center;
+	}
+
+	#search-form #edit-basic input[type="text"]{
+		display: block;
+	    float: none;
+	    margin: 0 auto 20px;
+	}
+
+	#search-form #edit-basic input[type="submit"]{
+		display: block;
+		margin: 0 auto 20px;
+		float: none;
+	}
+}
+
+
+@media (max-width: 479px) {
+
+	.costos-capacitaciones .box, .colaboracion-comunidad-bloques .box{
+		display: block;
+		height: auto;
+	    clear: both;
+	    overflow: hidden;
+	}
+	#bxslider_views_slideshow_main_nodequeue_1-block_queue_equipo_trabajo #views-slideshow-bxslider-1{
+		width: 80%;
+		margin: 0 auto;
+	}
+	#bxslider_views_slideshow_main_nodequeue_1-block_queue_equipo_trabajo .bx-wrapper .bx-viewport{
+		width: 65% !important;
+	}
+
+	.view-nuestro-equipo .views-row{
+		text-align: center;
+	}
+	.bx-wrapper .bx-controls-direction .bx-next{
+		right: -15px;
+	}
+	.bx-wrapper .bx-controls-direction .bx-prev{
+		left: -25px;
+	}
+	#bxslider_views_slideshow_main_nodequeue_1-block .views-slideshow-bxslider{
+		width: 180px;
+		margin: 0 auto;
+	}
+
+	.view-id-transparencia .views-row{
+		text-align: center;
+	}
+	.cuentas .gu .cuenta{
+		margin-bottom: 20px;
+	}
+
+	.llamado-accion .gu-1-4{
+		text-align: center;
+	}
+	.listado-calendario .panels-flexible-region-dos_columnas_25x75_-derecho-inside h2{
+		margin-top: 30px;
+	}
+
+	.listado-calendario .panels-flexible-una_columna .panels-flexible-region-inside{
+		padding-left: 0px;
+	}
+
+	.view-evento-calendario .views-exposed-widgets div{
+		width: 100%;
+	}
+	.view-evento-calendario .view-filters select{
+		display: block;
+		width: 100%;
+		margin-bottom: 10px;
+	}
+
+	.categorias-talleres .box_taller{
+		margin-bottom: 20px;
+		min-height: 475px;
+	}
+
+	.importancia-taller .btn{
+		line-height: 22px;
+	}
+
+	.pane-block-12 .gu_r, .pane-block-23 .gu_r{
+		text-align: center;
+	}
+
+	.view-convenios .views-row .convenio .logo-convenio{
+		max-height: inherit;
+		text-align: center;
+	}
+	.view-convenios .views-row .convenio .body{
+		padding: 20px;
+	}
+	.convenio .btn{
+		line-height: 20px;
+	}
+	.convenio .gu-1-5{
+		width: 100%;
+	}
+	.convenio .gu-4-5{
+		width: 100%;
+	}
+
+	.block-listado-colegios .view-content .views-row{
+		width: 100%;
+	}
+	.block-listado-colegios .view-content .views-row .ds-2col-fluid > .group-left{
+		width: 34%;
+	}
+
+	.block-listado-colegios .view-content .views-row .ds-2col-fluid > .group-left .field-name-field-imagen{
+		width: 100%;
+	}
+	.block-listado-colegios .view-content .views-row .ds-2col-fluid > .group-left .field-name-field-imagen img{
+		width: 100%;
+	}
+
+
+
+	.block-listado-colegios .view-content .views-row .ds-2col-fluid > .group-right{
+		width: 66%;
+		padding-left: 10px;
+	}
+
+	.llamado-accion p{
+		font-size: 16px;
+    line-height: 23px;
+    text-align: center;
+	}
+	.panels-flexible-dos_filas .panels-flexible-region.gu-3-4{
+		padding: 0px;
+	}
+	.panels-flexible-dos_filas .panels-flexible-region-inside{
+		padding: 0px;
+	}
+	.box_por_que.bpq1{
+		margin-bottom: 10px;
+	}
+	.box_por_que.bpq1:before{
+    top: initial;
+    bottom: -30px;
+    right: initial;
+    left: 40%;
+	}
+
+	.banner .group-enlace-imagen a #play{
+		width: 70px;
+		height: 70px;
+		background-size: 70px;
+		margin-bottom: 7px;
+	}
+	.banner .group-enlace-imagen a .play-titulo{
+		font-size: 16px;
+	}
+	.botones-historia{
+		margin: 0px;
+		float: none;
+	}
+	.botones-historia a{
+		margin-bottom: 10px;
+	}
+	.btn{
+		width: 100%;
+		float: none !important;
+		margin: 0px;
+		margin-left: 0px !important;
+		clear: both;
+		margin-bottom: 10px;
+	}
+	.btn.colorbox-load{
+		margin-right: 0px;
+	}
+	#block-easy-breadcrumb-easy-breadcrumb,
+	.st_sharethis_large{
+		display: none;
+	}
+
+	.alcance.gu-1-5{
+		min-height: auto;
+	}
+
+	#block-webform-client-block-1, #block-webform-client-block-239{
+		width: 100%;
+	}
+	.footer .block{
+		width: 100%;
+		clear: both;
+	}
+	#redes-sociales-prefooter ul, #redes-sociales ul{
+		float: left;
+	}
+	.i_tel,
+	.i_mail{
+		text-align: left;
+		background-position: 0% top;
+	}
+
+	.view-blog .views-row{
+		margin-bottom: 15px;
+	}
+
+	.alcance a{
+		text-align: center;
+	}
+
+	.utility-bar{
+		float: none;
+		width: 300px;
+		margin: 0 auto;
+	}
+
+	#logo{
+		width: 100%;
+		text-align: center;
+	}
+
+	.main-content{
+		padding: 0 2%;
+	}
+	h1{
+		font-size: 30px !important;
+	}
+	h2{
+		font-size: 28px;
+		line-height: 28px;
+	}
+
+
+	.gu-2,
+	.gu-3,
+	.gu-4,
+	.gu-5,
+	.gu-6,
+	.gu-1-1,
+	.gu-1-2,
+	.gu-1-3,
+	.gu-2-3,
+	.gu-1-4,
+	.gu-3-4,
+	.gu-1-5,
+	.gu-2-5,
+	.gu-3-5,
+	.gu-4-5,
+	.ne-1-3,
+	.ne-2-3
+	{ width: 100% !important; }
+	/*.gu {
+	  margin: 0 5%;
+	}*/
+  .ne {width: 100%;}
+
+	.gu-1-4{
+		width: 100%;
+		margin: 0 auto 20px;
+	}
+
+	
+	#info-contacto{
+		float: none;
+		margin:0 auto 30px;
+	}
+
+	.page-news-feed .panels-flexible-row-dos_filas_news_feed_menu_lateral-main-row,
+	.page-news-feed-en .panels-flexible-row-dos_filas_news_feed_menu_lateral-main-row{
+		padding: 50px 0 0 !important;
+	}
+
+	.view-blog .views-row > div.view-mode-blog_listaso .group-left, .view-display-id-page_categorias_blog .views-row > div.view-mode-blog_listaso .group-left{
+		width: 100%;
+		margin-bottom: 20px;
+	}
+
+	.view-blog .views-row > div.view-mode-blog_listaso .group-right, .view-display-id-page_categorias_blog .views-row > div.view-mode-blog_listaso .group-right{
+		width: 100%;
+		padding-left: 0;
+	}
+
+	.panels-flexible-dos_filas_news_feed_menu_lateral .panels-flexible-region-inside-last{
+		padding-left: 0 !important;
+	}
+
+	.panels-flexible-dos_filas_news_feed_menu_lateral .panels-flexible-region-inside-first{
+		padding-right: 0 !important;
+	}
+
+
+	.panels-flexible-dos_filas_news_feed_detalle .panels-flexible-region-inside-last{
+		padding-left: 0 !important;
+	}
+
+	.panels-flexible-dos_filas_news_feed_detalle .panels-flexible-region-inside-first{
+		padding-right: 0 !important;
+	}
+
+	.one-sidebar #sidebar-first{
+		float: none;
+		margin: 0 auto;
+		width: 100%;
+		margin-bottom: 30px;
+	}
+
+
+	
+}

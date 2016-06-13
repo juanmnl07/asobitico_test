@@ -1,0 +1,240 @@
+<?php
+/**
+ * Implements hook_block_info().
+ */
+function asobitico_module_block_info() {
+  $blocks = array();
+  $blocks['preguntas_frecuentes_paises'] = array(
+    'info' => t('Frequently asked questions by country'),
+  );
+  $blocks['preguntas_frecuentes_estudiantes'] = array(
+    'info' => t('Frequently asked questions to students'),
+  );
+  $blocks['preguntas_frecuentes_profesores'] = array(
+    'info' => t('Frequently asked questions to profesor'),
+  );
+  $blocks['preguntas_frecuentes_padres'] = array(
+    'info' => t('Frequently asked questions to parents'),
+  );
+  $blocks['preguntas_frecuentes_aliados'] = array(
+    'info' => t('Frequently asked questions to ally'),
+  );
+  return $blocks;
+}
+
+/**
+ * Implements hook_block_view().
+ */
+function asobitico_module_block_view($delta='') {
+  $block = array();
+  
+  switch($delta) {
+    case 'preguntas_frecuentes_paises' :
+      $block['content'] = array(
+        '#markup' => asobitico_module_preguntas_frecuentes_por_paises(),
+        '#attached' => array(
+            'js' => array(
+              drupal_get_path('module', 'asobitico_module') . '/js/custom_accordion.js',
+              'https://code.jquery.com/ui/1.9.2/jquery-ui.js',
+          ),
+            'css' => array(
+              drupal_get_path('module', 'asobitico_module') . '/css/custom_accordion.css',
+          ),
+        ),
+      );
+    break;
+    case 'preguntas_frecuentes_estudiantes' :
+      $block['content'] = array(
+        '#markup' => asobitico_module_preguntas_frecuentes(21),
+        );
+    break;
+    case 'preguntas_frecuentes_profesores' :
+      $block['content'] = array(
+        '#markup' => asobitico_module_preguntas_frecuentes(22),
+        );
+    break;
+    case 'preguntas_frecuentes_padres' :
+      $block['content'] = array(
+        '#markup' => asobitico_module_preguntas_frecuentes(23),
+        );
+    break;
+    case 'preguntas_frecuentes_aliados' :
+      $block['content'] = array(
+        '#markup' => asobitico_module_preguntas_frecuentes(24),
+        );
+    break;
+  }
+  
+  return $block;
+}
+/** 
+ *
+ * funcion para mostrar las preguntas frecuentes hacia los estudiantes
+ */
+function asobitico_module_preguntas_frecuentes($tid){
+  global $base_url;
+  global $language;
+  //********** ACORDION PADRES *******
+  $faq = taxonomy_term_load($tid);
+  $accordion = "<ul class='accordion'>";
+  $result = consultar_preguntas($faq, 'field_tipo_pregunta', 'preguntas_frecuentes_general', $language);
+  while($record = $result->fetchObject()) {
+    $accordion .= '<li><a class="heading">'.$record->field_pregunta_value.'</a><div>'.$record->field_respuesta_value.'</div></li>';
+  }
+  $accordion .= '</ul>';
+  return $accordion;
+}
+
+function asobitico_module_preguntas_frecuentes_por_paises(){
+  
+  global $base_url;
+  global $language;
+  //extraer el termino Costa Rica del vocabulario (pais)
+  //13 es el identificador para Costa Rica, NOTA: no cambiar este id en administracion
+  //********** ACORDION NACIONAL *******
+  $costa_rica = taxonomy_term_load(13);
+  if($language->language=='en')
+    $costa_rica = taxonomy_term_load(35);
+
+  $imagen = "<img alt='" . $costa_rica->field_imagen[LANGUAGE_NONE][0]['alt'] . "' src='" . $base_url . '/sites/default/files/banderas/' . $costa_rica->field_imagen[LANGUAGE_NONE][0]['filename'] . "'>";
+  $bloque_nacional = '<div id="pf-nacional"><h3><strong>'.t('National Universities').'</strong> - '.t('Frequently asked questions').'</h3>
+  <div class="costa-rica bpais">'.$imagen."<span>".$costa_rica->name."</span>".'</div></div>';
+  $accordion_nacional = "<ul class='accordion'>";
+  $result = consultar_preguntas($costa_rica, 'field_pais', 'preguntas_frecuentes_paises', $language);
+  while($record = $result->fetchObject()) {
+    $accordion_nacional .= '<li><a class="heading">'.$record->field_pregunta_value.'</a><div>'.$record->field_respuesta_value.'</div></li>';
+  }
+  $accordion_nacional .= '</ul>';
+  $bloque_nacional .= $accordion_nacional;
+
+  //********** ACORDION EXTRANJEROS *******  
+  $eu = taxonomy_term_load(14); //EEUU
+  $can = taxonomy_term_load(15); //Canada
+  $mex = taxonomy_term_load(16); //Mexico
+  $esp = taxonomy_term_load(17); //España
+  if($language->language=='en')
+  {
+    $eu = taxonomy_term_load(37); //EEUU
+    $can = taxonomy_term_load(34); //Canada
+    $mex = taxonomy_term_load(38); //Mexico
+    $esp = taxonomy_term_load(36); //España
+  }
+
+  $bloque_ext = '<div id="pf-extrajeros"><h3><strong>'.t('Foreign Universities').'</strong> - '.t('Frequently asked questions').'</h3></div>';
+
+  $accordion_eu = "<ul class='accordion'>";
+  $imagen = "<img alt='" . $eu->field_imagen[LANGUAGE_NONE][0]['alt'] . "' src='" . $base_url . '/sites/default/files/banderas/' . $eu->field_imagen[LANGUAGE_NONE][0]['filename'] . "'>";
+  $bloque_eu = '<div class="eu bpais">'.$imagen."<span>".$eu->name."</span>".'</div>';
+
+  $result = consultar_preguntas($eu, 'field_pais', 'preguntas_frecuentes_paises',$language);
+  while($record = $result->fetchObject()) {
+    $accordion_eu .= '<li><a class="heading">'.$record->field_pregunta_value.'</a><div>'.$record->field_respuesta_value.'</div></li>';
+  }
+
+  $accordion_eu .= '</ul>';
+  $bloque_eu .= $accordion_eu;
+
+  $accordion_can = "<ul class='accordion'>";
+  $imagen = "<img alt='" . $can->field_imagen[LANGUAGE_NONE][0]['alt'] . "' src='" . $base_url . '/sites/default/files/banderas/' . $can->field_imagen[LANGUAGE_NONE][0]['filename'] . "'>";
+  $bloque_can = '<div class="can bpais">'.$imagen."<span>".$can->name."</span>".'</div>';
+
+  $result = consultar_preguntas($can, 'field_pais', 'preguntas_frecuentes_paises',$language);
+  while($record = $result->fetchObject()) {
+    $accordion_can .= '<li><a class="heading">'.$record->field_pregunta_value.'</a><div>'.$record->field_respuesta_value.'</div></li>';
+  }
+
+  $accordion_can .= '</ul>';
+  $bloque_can .= $accordion_can;
+
+  $accordion_mex = "<ul class='accordion'>";
+  $imagen = "<img alt='" . $mex->field_imagen[LANGUAGE_NONE][0]['alt'] . "' src='" . $base_url . '/sites/default/files/banderas/' . $mex->field_imagen[LANGUAGE_NONE][0]['filename'] . "'>";
+  $bloque_mex = '<div class="mex bpais">'.$imagen."<span>".$mex->name."</span>".'</div>';
+
+  $result = consultar_preguntas($mex, 'field_pais', 'preguntas_frecuentes_paises',$language);
+  while($record = $result->fetchObject()) {
+    $accordion_mex .= '<li><a class="heading">'.$record->field_pregunta_value.'</a><div>'.$record->field_respuesta_value.'</div></li>';
+  }
+
+  $accordion_mex .= '</ul>';
+  $bloque_mex .= $accordion_mex;
+
+  $accordion_esp = "<ul class='accordion'>";
+  $imagen = "<img alt='" . $esp->field_imagen[LANGUAGE_NONE][0]['alt'] . "' src='" . $base_url . '/sites/default/files/banderas/' . $esp->field_imagen[LANGUAGE_NONE][0]['filename'] . "'>";
+  $bloque_esp = '<div class="esp bpais">'.$imagen."<span>".$esp->name."</span>".'</div>';
+
+  $result = consultar_preguntas($esp, 'field_pais', 'preguntas_frecuentes_paises',$language);
+  while($record = $result->fetchObject()) {
+    $accordion_esp .= '<li><a class="heading">'.$record->field_pregunta_value.'</a><div>'.$record->field_respuesta_value.'</div></li>';
+  }
+
+  $accordion_esp .= '</ul>';
+  $bloque_esp .= $accordion_esp;
+
+  $bloque_ext .= $bloque_eu . $bloque_can . $bloque_mex .$bloque_esp;
+
+  return "<h2 class='azul'>".t('Information about universities and the IB Program')."</h2>".$bloque_nacional . $bloque_ext;
+}
+
+function consultar_preguntas($field, $field_name, $node_type, $language){
+  $query = db_select('node', 'n');
+  //$query->fields('n', array('title'));
+  $query->join('field_data_'.$field_name.'','p','n.nid = p.entity_id');
+  $query->join('field_data_field_preguntas','fdfps','n.nid = fdfps.entity_id');
+  $query->join('field_data_field_pregunta','fdfp','fdfp.entity_id = fdfps.field_preguntas_value');
+  $query->join('field_data_field_respuesta','fdfr','fdfr.entity_id = fdfps.field_preguntas_value');
+  $query->fields('fdfp', array('field_pregunta_value'));
+  $query->fields('fdfr', array('field_respuesta_value'));
+  $query->condition('n.type',$node_type,'=');
+  $query->condition('n.language',$language->language,'=');
+  $query->condition('p.'.$field_name.'_tid',$field->tid,'=');
+  $result = $query->execute();
+  return $result;
+}
+
+/**
+ * Impliments hook_form_views_exposed_form_alter
+ *
+ * Used to change exposed date filter to month only, as this is not available in the views UI
+ */
+function asobitico_module_form_views_exposed_form_alter(&$form, $form_state) {
+  if( $form['#id'] == 'views-exposed-form-evento-calendario-block-calendario') {
+    // Switch date formatter to month only
+    //dpm($form);
+    $form['field_fecha_value']['value']['#date_format'] = 'm';
+    // Add extra validator to handle filter submit
+    $form['#validate'][] = 'asobitico_module_views_exposed_form_validate';
+  }elseif($form['#id'] == 'views-exposed-form-colegios-block-listado-colegios'){
+    unset($form['field_colegio_tid']['#options']['All']);
+  }
+}
+/**
+ * Custom validator for exposed date filter
+ */
+function asobitico_module_views_exposed_form_validate(&$form, &$form_state) {
+  $handlers = &$form_state['view']->filter;
+  foreach ($handlers as $key => $handler) {
+    if (!empty($handler->options['exposed'])
+     && isset($form[$key]['value']['#type'])
+     && $form[$key]['value']['#type'] == 'date_select'
+     && $form[$key]['value']['#date_format'] == 'm'){
+      $handler->options['granularity'] = 'month';
+      $handler->format = 'm';
+    }
+  }
+}
+
+function asobitico_module_date_parts_element_alter(&$element) {
+  if(isset($element['year'])){
+    foreach($element['year']['#options'] as $key=>$value) {
+      if($value == '-Year') {
+        $element['year']['#options'][$key] = t('All years');
+      }
+    }
+  } elseif(isset($element['month'])){
+    foreach($element['month']['#options'] as $key=>$value) {
+      if($value == '-Month') {
+        $element['month']['#options'][$key] = t('All months');
+      }
+    }
+  }
+}

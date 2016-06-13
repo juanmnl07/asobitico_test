@@ -1,0 +1,263 @@
+@media (max-width: 991px) {
+
+	.view-evento-calendario .views-row{
+		padding-bottom: 30px;
+	}
+	#listado-colegios .view-filters{
+		position: static;
+		width: 80%;
+		margin: 0 auto;
+		margin-bottom: 40px;
+	}
+	#listado-colegios .view-filters select{
+		width: 100%;
+	}
+	#listado-colegios{
+	  display: block;
+	}
+	#mapa{
+		display: none;
+	}
+	.panels-flexible-row-dos_filas_con_menu_faqs-main-row.sub-menu .menu li a{
+		padding: 15px 10px;
+	}
+	.panels-flexible-dos_columnas_encabezado_pie_apoyenos-inside .sub-menu .menu li a,
+	.page-informes-transparencia .sub-menu .menu li a,
+	.page-transparency-reports .sub-menu .menu li a,
+	.page-donacion-directa .sub-menu .menu li a,
+	.page-direct-donation .sub-menu .menu li a{
+	  padding: 15px 10px;
+	  max-width: 100%;
+	}
+
+
+	.page-eventos-desarrollo-profesional .talleres-desarrollo-profesional .b-azul,
+	.page-professional-development-events .talleres-desarrollo-profesional .b-azul{
+		margin-right: 0px;
+		margin-top: 10px;
+	}
+
+	.categorias-talleres .gu h3{
+		width: 100%;
+	}
+	.categorias-talleres .box_taller{
+		width: 100%;
+	}
+
+	.talleres .btn{
+		margin-right: 0px;
+		margin-bottom: 10px;
+	}
+
+	.convenio .gu-1-5{
+		width: 40%;
+	}
+	.convenio .gu-4-5{
+		width: 60%;
+	}
+
+	#quicktabs-container-mapa .quicktabs-tabpage .view-colegios .view-content{
+		width: 100%;
+	}
+	.block-listado-colegios .view-content .views-row{
+		width: 350px;
+	}
+	.block-listado-colegios .view-content .views-row .ds-2col-fluid > .group-left{
+		width: 130px;
+	}
+	.block-listado-colegios .view-content .views-row .ds-2col-fluid > .group-right{
+		width: 220px;
+	}
+
+	.sub-menu .menu{
+		height: auto;
+	}
+	.sub-menu .menu li{
+		display: block;
+		border: 1px solid #CED0D1; border-top: none;
+	}
+	.sub-menu .menu li a{
+		display: block;
+		width: 100%;
+		text-align: center;
+		max-width: 100%;
+		height: auto;
+		padding: 15px 10px;
+	}
+	
+	.panels-flexible-dos_filas .panels-flexible-region{
+		padding: 0px;
+		width: 100%;
+	}
+	#menu-lateral ul li a{
+		font-size: 14px;
+	}
+
+	.not-front .banner .group-enlace-imagen{
+		top: 0px;
+		margin-bottom: 0px;
+	}
+	.banner .group-enlace-imagen a{
+		top: 10%;
+	}
+	.banner .group-enlace-imagen img{
+		width: 100% !important;
+		height: auto !important;
+	}
+	.banner .group-enlace-imagen a #play{
+		width: 100px;
+		height: 100px;
+		background-size: 100px;
+	}
+	.above-content{
+		padding-left: 15px;
+	}
+	#block-menu-block-1{
+		float: none;
+		margin: 0px 20px;
+		clear: both;
+		overflow: hidden;
+	}
+
+	.tinynav-wrapper {
+	   margin:40px auto 20px auto;
+	   border:1px solid #d9d9d9;
+	   height:30px;
+	   overflow: hidden;
+	   width: 100%;
+	   position:relative;
+	}
+	.tinynav-wrapper select {
+	   background: transparent;
+	   border: none;
+	   font-size: 14px;
+	   height: 30px;
+	   padding: 5px;
+	   width: 100%;
+		 -moz-appearance: none;
+		 -webkit-appearance: none;
+		 appearance: none;
+	}
+	.tinynav-wrapper select:focus{ outline: none;}
+
+	.tinynav-wrapper::after{
+		content:"\025be";
+		display:table-cell;
+		padding-top: 3px;
+		text-align:center;
+		width:30px;
+		height:30px;
+		background-color:#d9d9d9;
+		position:absolute;
+		top:0;
+		right:0px;	
+		pointer-events: none;
+	}
+
+
+
+
+	.caja-icono{
+		width: 100%;
+	}
+
+	.last {
+    	padding: 0 0.875em;
+	}
+
+	.caja-icono strong{
+		font-size: 16px;
+	}
+
+	.caja-icono p{
+		font-size: 12px;
+	}
+
+	.alcance.gu-1-5{
+		width: 33%; /*20%*/
+	}
+	.alcance.gu-1-5{
+		min-height: 450px;
+	}
+
+	.bx-wrapper .bx-viewport{
+		width: 90% !important;
+	}
+
+	.bx-wrapper .bx-controls-direction .bx-next{
+		right: 5px;
+	}
+
+	.bx-wrapper .bx-controls-direction .bx-prev{
+		left: -2px;
+	}
+
+	.view-blog .views-row > div{
+		width: 100%;
+	}
+
+	#redes-sociales-lateral, #informacion-lateral{
+		display: none;
+	}
+
+	.pre-footer{
+		padding: 0 15px;
+	}
+
+	.footer{
+		padding: 0 15px;
+	}
+
+	.footer .inner{
+		padding-bottom: 50px;
+	}
+
+	.footer .block{
+		margin-right: 0;
+		padding: 0 20px;
+		width: 50%;
+	}
+
+	#block-webform-client-block-1, #block-webform-client-block-239{
+		width: 50%;
+		margin-top: 20px;
+	}
+
+	.header{
+		padding: 0 15px;
+	}
+
+	.panels-flexible-row-contacto-main-row{
+		padding: 0 3% !important;
+	}
+
+	.page-news-feed .panels-flexible-row-dos_filas_news_feed_menu_lateral-main-row,
+	.page-news-feed-en .panels-flexible-row-dos_filas_news_feed_menu_lateral-main-row{
+		padding: 50px 3% 0 !important;
+	}
+
+	.page-news-feed .panels-flexible-row-dos_filas_news_feed_menu_lateral-main-row h3,
+	.page-news-feed-en .panels-flexible-row-dos_filas_news_feed_menu_lateral-main-row h3,
+
+
+	.node-type-blog .panels-flexible-row-dos_filas_news_feed_detalle-main-row  h3{
+		margin-top: 0;
+	}
+
+	.node-type-blog .panels-flexible-row.panels-flexible-row-dos_filas_news_feed_detalle-main-row  {
+	    padding: 50px 2% 0px !important;
+	}
+
+	.page-search .main{
+		padding: 0 3%;
+	}
+
+	#search-form #edit-basic input[type="text"]{
+		width: 285px;
+	}
+
+	.page-contactenos h2,
+	.page-contact-us h2{
+		margin-top: 20px;
+	}
+}
